@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. Katia Valeria Ortega Díaz | Nutrición General & Infantil</title>
+    <title>Nutrióloga Infantil Lic. Katia Valeria | Nutrición Pediátrica y Familiar</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #2C3E50;
-            --primary-dark: #1A252F;
-            --secondary: #16A085;
-            --accent: #F4D03F;
-            --dark: #2D3436;
-            --light: #F8F9F9;
+            --primary: #1E3A8A;
+            --primary-dark: #0F172A;
+            --secondary: #0D9488;
+            --secondary-light: #F0FDFA;
+            --accent: #F59E0B;
+            --kids-pink: #FF6B6B;
+            --kids-yellow: #FFD93D;
+            --kids-bg: #FFFDF9;
+            --dark: #1E293B;
+            --light: #F8FAFC;
             --white: #FFFFFF;
-            --gray: #636E72;
-            --shadow: 0 20px 40px rgba(44, 62, 80, 0.12);
-            --radius: 28px;
+            --gray: #64748B;
+            --shadow: 0 20px 40px -15px rgba(13, 148, 136, 0.12);
+            --radius: 24px;
         }
 
         * {
@@ -41,7 +45,7 @@
             font-family: 'Outfit', sans-serif;
         }
 
-        /* HEADER */
+        /* HEADER LIMPIO Y MODERNO */
         header {
             position: fixed;
             top: 0;
@@ -54,7 +58,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 5%;
+            padding: 14px 5%;
+            transition: 0.3s;
         }
 
         .logo {
@@ -72,19 +77,19 @@
 
         .brand-row-1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 800;
             letter-spacing: -0.5px;
         }
 
-        .brand-kids { color: #F1C40F; }
-        .brand-amp { color: #7DCEA0; padding: 0 2px; }
+        .brand-kids { color: var(--kids-pink); }
+        .brand-amp { color: var(--secondary); padding: 0 2px; }
 
         .brand-row-2 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.1rem;
             font-weight: 700;
-            color: #8E44AD;
+            color: #7C3AED;
             letter-spacing: 0.5px;
         }
 
@@ -94,13 +99,12 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-top: 2px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 25px;
             align-items: center;
         }
 
@@ -108,25 +112,25 @@
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             transition: 0.3s;
         }
 
         nav a:hover { color: var(--secondary); }
 
         .btn-cta {
-            background: linear-gradient(135deg, var(--secondary), #1ABC9C);
+            background: linear-gradient(135deg, var(--kids-pink), #FF8E53);
             color: var(--white) !important;
-            padding: 10px 22px;
+            padding: 10px 24px;
             border-radius: 35px;
             font-weight: 600 !important;
-            box-shadow: 0 10px 25px rgba(22, 160, 133, 0.3);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.35);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-cta:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(22, 160, 133, 0.5);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.5);
         }
 
         /* HERO SECTION */
@@ -135,41 +139,61 @@
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             align-items: center;
-            gap: 40px;
-            background: radial-gradient(circle at 90% 10%, rgba(22, 160, 133, 0.12), transparent 40%),
-                        radial-gradient(circle at 10% 90%, rgba(44, 62, 80, 0.08), transparent 40%);
+            gap: 50px;
+            background: radial-gradient(circle at 90% 10%, rgba(255, 107, 107, 0.08), transparent 40%),
+                        radial-gradient(circle at 10% 90%, rgba(255, 217, 61, 0.15), transparent 40%);
+            position: relative;
         }
+
+        .floating-bubble {
+            position: absolute;
+            background: rgba(255, 107, 107, 0.08);
+            border-radius: 50%;
+            z-index: 1;
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+        .bubble-1 { width: 90px; height: 90px; top: 120px; left: 4%; }
+        .bubble-2 { width: 60px; height: 60px; bottom: 40px; left: 42%; animation-delay: 2s; background: rgba(255, 217, 61, 0.2); }
+        .bubble-3 { width: 110px; height: 110px; top: 80px; right: 5%; animation-delay: 4s; background: rgba(13, 148, 136, 0.06); }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.05); }
+        }
+
+        .hero-content { position: relative; z-index: 2; }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             background: var(--white);
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 30px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-            color: var(--secondary);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            color: var(--kids-pink);
             font-weight: 600;
             font-size: 0.88rem;
             margin-bottom: 20px;
+            border: 2px solid rgba(255, 107, 107, 0.2);
         }
 
         .hero-content h2 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             line-height: 1.15;
-            color: var(--dark);
+            color: var(--primary-dark);
             margin-bottom: 20px;
         }
 
         .hero-content h2 span {
-            color: var(--secondary);
-            background: linear-gradient(120deg, rgba(22, 160, 133, 0.15) 0%, rgba(241, 196, 15, 0.25) 100%);
+            color: var(--kids-pink);
+            background: rgba(255, 107, 107, 0.1);
             padding: 0 8px;
             border-radius: 8px;
         }
 
         .hero-content p {
-            font-size: 1.02rem;
+            font-size: 1.05rem;
             color: var(--gray);
             margin-bottom: 30px;
             line-height: 1.7;
@@ -185,7 +209,7 @@
             background: transparent;
             border: 2px solid var(--secondary);
             color: var(--secondary);
-            padding: 10px 22px;
+            padding: 10px 24px;
             border-radius: 35px;
             font-weight: 600;
             text-decoration: none;
@@ -202,54 +226,51 @@
             display: flex;
             justify-content: center;
             width: 100%;
+            z-index: 2;
         }
 
         .hero-card-float {
             position: absolute;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
-            padding: 14px 18px;
-            border-radius: 18px;
+            padding: 16px 20px;
+            border-radius: 20px;
             box-shadow: var(--shadow);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             z-index: 3;
-            max-width: 240px;
+            max-width: 250px;
+            border-left: 4px solid var(--kids-pink);
+            animation: floatSlow 4s ease-in-out infinite;
         }
 
-        .hero-card-float.card-1 {
-            top: 15px;
-            left: 5px;
-        }
-
-        .hero-card-float.card-2 {
-            bottom: 25px;
-            right: 5px;
-        }
+        .hero-card-float.card-1 { top: 20px; left: -10px; }
+        .hero-card-float.card-2 { bottom: 30px; right: -10px; animation-delay: 2s; border-left-color: var(--kids-yellow); }
 
         .hero-card-float i {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            background: rgba(22, 160, 133, 0.1);
-            padding: 10px;
-            border-radius: 12px;
+            font-size: 1.6rem;
+            color: var(--kids-pink);
+            background: rgba(255, 107, 107, 0.12);
+            padding: 12px;
+            border-radius: 14px;
         }
 
-        /* MARCO LOGOTIPO */
+        .hero-card-float.card-2 i { color: #D97706; background: #FEF3C7; }
+
         .main-avatar-box {
             width: 100%;
-            max-width: 380px;
-            height: 400px;
-            background: linear-gradient(145deg, #ffffff, #f1f8f6);
-            border-radius: 32px;
+            max-width: 400px;
+            height: 420px;
+            background: linear-gradient(145deg, #ffffff, var(--kids-bg));
+            border-radius: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
-            border: 4px solid var(--secondary);
+            border: 4px solid var(--kids-yellow);
             padding: 20px;
             margin: 0 auto;
         }
@@ -258,28 +279,76 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 20px;
+            border-radius: 24px;
+        }
+
+        /* SECCIÓN DE BENEFICIOS PEDIÁTRICOS (TIPO RINCÓN INFANTIL) */
+        .stats-section {
+            background: var(--white);
+            padding: 50px 5%;
+            margin: 0 5% 50px 5%;
+            border-radius: var(--radius);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 2px dashed rgba(255, 217, 61, 0.6);
+        }
+
+        .stat-item {
+            padding: 20px;
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .stat-item:hover {
+            background: #FFFDF4;
+            transform: translateY(-5px);
+        }
+
+        .stat-item i {
+            font-size: 2.2rem;
+            color: var(--kids-pink);
+            margin-bottom: 15px;
+            background: rgba(255, 107, 107, 0.1);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .stat-item h3 {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 500;
+            line-height: 1.5;
         }
 
         /* SOBRE LA LICENCIADA */
         .about {
-            padding: 90px 5%;
+            padding: 80px 5%;
             background: var(--white);
             display: grid;
             grid-template-columns: 1fr 1.15fr;
-            gap: 50px;
+            gap: 60px;
             align-items: center;
         }
 
         .about-img-box {
-            background: linear-gradient(135deg, rgba(44,62,80,0.08), rgba(22,160,133,0.15));
+            background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(255,217,61,0.15));
             border-radius: 36px;
             padding: 12px;
-            border: 3px solid var(--secondary);
-            box-shadow: 0 15px 35px rgba(22, 160, 133, 0.15);
+            border: 3px solid var(--kids-pink);
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.12);
             width: 100%;
-            max-width: 380px;
-            height: 440px;
+            max-width: 390px;
+            height: 460px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -291,21 +360,11 @@
             height: 100%;
             object-fit: cover;
             object-position: center top;
-            border-radius: 22px;
+            border-radius: 24px;
         }
 
-        .about-content h3 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .about-content p {
-            color: var(--gray);
-            margin-bottom: 20px;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
+        .about-content h3 { font-size: 2.4rem; margin-bottom: 20px; color: var(--primary-dark); }
+        .about-content p { color: var(--gray); margin-bottom: 20px; line-height: 1.7; font-size: 1.02rem; }
 
         .features-grid {
             display: grid;
@@ -322,53 +381,25 @@
             color: var(--dark);
             font-size: 0.92rem;
             background: var(--light);
-            padding: 12px 16px;
-            border-radius: 14px;
+            padding: 14px 18px;
+            border-radius: 16px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: 0.3s;
         }
-
-        .feature-item i {
-            color: var(--secondary);
-            background: var(--white);
-            padding: 8px;
-            border-radius: 50%;
-        }
+        .feature-item:hover { transform: translateX(4px); background: rgba(255,107,107,0.05); }
+        .feature-item i { color: var(--kids-pink); background: var(--white); padding: 8px; border-radius: 50%; }
 
         /* SERVICIOS */
-        .spaces-section {
-            padding: 90px 5%;
-            background: var(--light);
-        }
+        .spaces-section { padding: 90px 5%; background: var(--light); }
+        .section-title { text-align: center; max-width: 650px; margin: 0 auto 45px auto; }
+        .section-title h2 { font-size: 2.8rem; margin-bottom: 14px; color: var(--primary-dark); }
+        .section-title p { color: var(--gray); font-size: 1.05rem; }
 
-        .section-title {
-            text-align: center;
-            max-width: 650px;
-            margin: 0 auto 45px auto;
-        }
-
-        .section-title h2 {
-            font-size: 2.6rem;
-            margin-bottom: 14px;
-            color: var(--dark);
-        }
-
-        .section-title p {
-            color: var(--gray);
-            font-size: 1.02rem;
-        }
-
-        .tabs-nav {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
+        .tabs-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
         .tab-btn {
             background: var(--white);
             border: none;
-            padding: 14px 24px;
+            padding: 14px 28px;
             border-radius: 35px;
             font-weight: 600;
             font-size: 0.96rem;
@@ -382,140 +413,115 @@
         }
 
         .tab-btn.active, .tab-btn:hover {
-            background: var(--secondary);
+            background: var(--kids-pink);
             color: var(--white);
-            box-shadow: 0 10px 30px rgba(22, 160, 133, 0.35);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.35);
         }
 
-        .tab-content {
-            display: none;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
+        .tab-content { display: none; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .tab-content.active { display: grid; }
 
         .service-card {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 35px 25px;
+            padding: 40px 30px;
             box-shadow: var(--shadow);
             border-top: 6px solid var(--primary);
             transition: 0.3s;
         }
 
         .service-card:hover { transform: translateY(-8px); }
-        .service-card.kids { border-top-color: var(--secondary); }
+        .service-card.kids { border-top-color: var(--kids-pink); }
 
-        .service-card i {
-            font-size: 2.6rem;
-            color: var(--primary);
-            margin-bottom: 18px;
-            display: inline-block;
-        }
+        .service-card i { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; display: inline-block; transition: 0.3s; }
+        .service-card:hover i { transform: scale(1.1) rotate(5deg); }
+        .service-card.kids i { color: var(--kids-pink); }
 
-        .service-card.kids i { color: var(--secondary); }
-
-        .service-card h4 {
-            font-size: 1.35rem;
-            margin-bottom: 14px;
-            color: var(--dark);
-        }
-
-        .service-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
+        .service-card h4 { font-size: 1.4rem; margin-bottom: 14px; color: var(--primary-dark); }
+        .service-card p { color: var(--gray); font-size: 0.96rem; margin-bottom: 20px; line-height: 1.6; }
 
         .service-list { list-style: none; }
         .service-list li {
             font-size: 0.92rem;
             color: var(--dark);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
-        .service-list li i {
-            font-size: 0.82rem;
-            color: var(--secondary);
-            margin-bottom: 0;
-        }
+        .service-list li i { font-size: 0.82rem; color: var(--kids-pink); margin-bottom: 0; transform: none !important; }
 
         /* CALCULADORA IMC */
         .interactive-tools {
             padding: 90px 5%;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: var(--white);
             border-radius: 40px;
             margin: 0 5%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 45px;
+            gap: 50px;
             align-items: center;
-            box-shadow: 0 25px 60px rgba(44, 62, 80, 0.3);
+            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.3);
         }
 
-        .tool-info h3 { font-size: 2.6rem; margin-bottom: 20px; }
+        .tool-info h3 { font-size: 2.8rem; margin-bottom: 20px; }
         .tool-info p { font-size: 1.05rem; opacity: 0.95; line-height: 1.7; }
 
         .imc-calculator {
             background: var(--white);
             color: var(--dark);
-            padding: 35px;
+            padding: 40px;
             border-radius: var(--radius);
             box-shadow: 0 25px 50px rgba(0,0,0,0.18);
         }
 
-        .imc-calculator h4 { font-size: 1.5rem; margin-bottom: 20px; color: var(--primary); text-align: center; }
+        .imc-calculator h4 { font-size: 1.6rem; margin-bottom: 20px; color: var(--primary-dark); text-align: center; }
 
-        .form-group { margin-bottom: 16px; }
+        .form-group { margin-bottom: 18px; }
         .form-group label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; }
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #eee;
-            border-radius: 14px;
-            font-size: 0.95rem;
+            padding: 14px 18px;
+            border: 2px solid #E2E8F0;
+            border-radius: 16px;
+            font-size: 0.96rem;
             background: var(--light);
             outline: none;
             transition: 0.3s;
         }
 
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--secondary);
+            border-color: var(--kids-pink);
             background: var(--white);
         }
 
         .btn-calc {
             width: 100%;
-            background: var(--secondary);
+            background: var(--kids-pink);
             color: var(--white);
             border: none;
             padding: 14px;
-            border-radius: 14px;
+            border-radius: 16px;
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
             transition: 0.3s;
             margin-top: 8px;
         }
-
-        .btn-calc:hover { background: #117A65; }
+        .btn-calc:hover { background: #e05555; }
 
         #imc-result {
             margin-top: 16px;
             text-align: center;
             font-weight: 600;
             font-size: 0.95rem;
-            background: #F8F9F9;
+            background: rgba(255, 107, 107, 0.1);
             padding: 14px;
             border-radius: 12px;
             display: none;
-            border: 1px dashed var(--secondary);
+            border: 1px dashed var(--kids-pink);
+            color: var(--kids-pink);
         }
 
         /* FAQ */
@@ -523,37 +529,37 @@
         .faq-container { max-width: 750px; margin: 0 auto; }
         .faq-item {
             background: var(--light);
-            border-radius: 14px;
-            margin-bottom: 14px;
+            border-radius: 16px;
+            margin-bottom: 16px;
             overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.04);
+            border: 1px solid #E2E8F0;
+            transition: 0.3s;
         }
+        .faq-item:hover { border-color: var(--kids-pink); }
 
         .faq-question {
-            padding: 18px 22px;
+            padding: 20px 24px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.02rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: var(--dark);
         }
-
-        .faq-question i { transition: transform 0.3s; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); color: var(--secondary); }
+        .faq-question i { transition: transform 0.3s; color: var(--kids-pink); }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
 
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.4s ease;
-            padding: 0 22px;
+            padding: 0 24px;
             color: var(--gray);
-            font-size: 0.95rem;
+            font-size: 0.96rem;
             line-height: 1.6;
         }
-
-        .faq-item.active .faq-answer { max-height: 220px; padding: 0 22px 18px 22px; }
+        .faq-item.active .faq-answer { max-height: 220px; padding: 0 24px 20px 24px; }
 
         /* CONTACTO Y CITAS */
         .appointment-section { padding: 90px 5%; background: var(--light); }
@@ -568,7 +574,7 @@
             box-shadow: var(--shadow);
         }
 
-        .appointment-info h3 { font-size: 2.4rem; margin-bottom: 18px; color: var(--dark); }
+        .appointment-info h3 { font-size: 2.5rem; margin-bottom: 18px; color: var(--primary-dark); }
         .appointment-info p { color: var(--gray); margin-bottom: 30px; line-height: 1.7; font-size: 1.02rem; }
 
         .contact-methods { display: flex; flex-direction: column; gap: 16px; }
@@ -577,19 +583,18 @@
             align-items: center;
             gap: 16px;
             background: var(--light);
-            padding: 16px 20px;
-            border-radius: 16px;
+            padding: 18px 22px;
+            border-radius: 18px;
             text-decoration: none;
             color: inherit;
             transition: 0.3s;
         }
-
-        .contact-box:hover { background: var(--white); transform: translateX(5px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
-        .contact-box i { font-size: 1.5rem; color: var(--secondary); background: rgba(22, 160, 133, 0.1); padding: 12px; border-radius: 14px; }
+        .contact-box:hover { background: var(--white); transform: translateX(6px); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+        .contact-box i { font-size: 1.6rem; color: var(--kids-pink); background: rgba(255, 107, 107, 0.1); padding: 14px; border-radius: 16px; }
         .contact-box h5 { font-size: 0.85rem; color: var(--gray); }
         .contact-box p { font-size: 0.98rem; font-weight: 600; color: var(--dark); margin: 0; }
 
-        .appointment-form textarea { resize: none; height: 120px; }
+        .appointment-form textarea { resize: none; height: 130px; }
 
         /* WHATSAPP FLOTANTE */
         .whatsapp-float {
@@ -598,41 +603,39 @@
             right: 25px;
             background: #25d366;
             color: white;
-            width: 58px;
-            height: 58px;
+            width: 62px;
+            height: 62px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+            font-size: 2.2rem;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
             z-index: 9999;
             text-decoration: none;
             transition: 0.3s;
         }
-
         .whatsapp-float:hover { transform: scale(1.1); }
 
         /* FOOTER */
-        footer { background: var(--dark); color: var(--white); padding: 60px 5% 30px 5%; text-align: center; }
+        footer { background: var(--primary-dark); color: var(--white); padding: 70px 5% 35px 5%; text-align: center; }
         .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 30px;
-            margin-bottom: 30px;
+            padding-bottom: 35px;
+            margin-bottom: 35px;
             flex-wrap: wrap;
             gap: 20px;
         }
-
-        .footer-logo { font-size: 1.4rem; font-weight: 700; display: flex; align-items: center; gap: 12px; }
+        .footer-logo { font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 12px; }
         .social-icons { display: flex; gap: 14px; }
         .social-icons a {
             background: rgba(255,255,255,0.1);
             color: var(--white);
-            width: 44px;
-            height: 44px;
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -640,45 +643,41 @@
             text-decoration: none;
             transition: 0.3s;
         }
-        .social-icons a:hover { background: var(--secondary); transform: translateY(-3px); }
-        .copyright { font-size: 0.9rem; color: #b2bec3; }
+        .social-icons a:hover { background: var(--kids-pink); transform: translateY(-3px); }
+        .copyright { font-size: 0.9rem; color: #94A3B8; }
 
-        /* OPTIMIZACIONES MÓVILES RESPONSIVAS PROFESIONALES */
+        /* MEDIA QUERIES */
         @media(max-width: 968px) {
             header { padding: 12px 4%; }
-            nav ul { display: none; } /* Oculta menú de escritorio en móvil para evitar desbordes */
+            nav ul { display: none; }
             .hero, .about, .interactive-tools, .appointment-grid {
                 grid-template-columns: 1fr;
                 gap: 35px;
                 padding-top: 130px;
             }
-            .hero-content h2 { font-size: 2.3rem; }
-            .hero-card-float { padding: 10px 14px; max-width: 180px; }
+            .hero-content h2 { font-size: 2.4rem; }
+            .hero-card-float { padding: 12px 16px; max-width: 190px; }
             .hero-card-float strong { font-size: 0.85rem; }
             .hero-card-float p { font-size: 0.72rem !important; }
-            .hero-card-float.card-1 { top: 5px; left: -5px; }
-            .hero-card-float.card-2 { bottom: 5px; right: -5px; }
             .interactive-tools { margin: 0 4%; border-radius: 30px; padding: 50px 6%; }
             .appointment-grid { padding: 30px 20px; }
         }
 
         @media(max-width: 480px) {
-            .hero-content h2 { font-size: 1.9rem; }
-            .section-title h2 { font-size: 2rem; }
-            .main-avatar-box, .about-img-box { height: 340px; max-width: 100%; }
-            .brand-row-1 { font-size: 1.1rem; }
-            .brand-row-2 { font-size: 0.95rem; }
+            .hero-content h2 { font-size: 2rem; }
+            .section-title h2 { font-size: 2.1rem; }
+            .main-avatar-box, .about-img-box { height: 350px; max-width: 100%; }
         }
     </style>
 </head>
 <body>
 
     <!-- WHATSAPP FLOTANTE -->
-    <a href="https://wa.me/5215561901308?text=Hola%20Lic.%20Katia,%20vengo%20de%20su%20página%20web" target="_blank" class="whatsapp-float" title="Chatea por WhatsApp">
+    <a href="https://wa.me/5215561901308?text=Hola%20Nutrióloga%20Katia,%20vengo%20de%20su%20página%20web" target="_blank" class="whatsapp-float" title="Chatea por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- HEADER -->
+    <!-- HEADER LIMPIO -->
     <header>
         <a href="#" class="logo">
             <div class="brand-logo-text">
@@ -687,9 +686,9 @@
                 </div>
                 <div class="brand-row-2">nutrition</div>
             </div>
-            <div style="border-left: 2px solid #ddd; padding-left: 10px;">
-                <span style="font-size: 0.85rem; font-weight: 700; color: var(--dark); display: block;">Lic. Katia Valeria</span>
-                <span class="logo-subtitle">Nutrición General & Infantil</span>
+            <div style="border-left: 2px solid #E2E8F0; padding-left: 12px;">
+                <span style="font-size: 0.88rem; font-weight: 700; color: var(--primary-dark); display: block;">Lic. Katia Valeria</span>
+                <span class="logo-subtitle">Nutrición Pediátrica</span>
             </div>
         </a>
         <nav>
@@ -705,77 +704,105 @@
 
     <!-- HERO SECTION -->
     <section class="hero" id="inicio">
+        <div class="floating-bubble bubble-1"></div>
+        <div class="floating-bubble bubble-2"></div>
+        <div class="floating-bubble bubble-3"></div>
+
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fa-solid fa-heart-pulse"></i> Nutrición clínica, familiar y pediátrica
+                <i class="fa-solid fa-child-reaching"></i> Nutrición Pediátrica Especializada
             </div>
-            <h2>Salud y bienestar que transforma vidas de <span>generación en generación</span></h2>
-            <p>Ayudo a familias, adultos y pequeños a descubrir el poder de una alimentación consciente, divertida y adaptada a sus metas reales con la guía experta de la Lic. Katia Valeria Ortega Díaz.</p>
+            <h2>Nutrición divertida y saludable para un <span>crecimiento feliz</span></h2>
+            <p>Acompañamos a las familias en cada etapa del desarrollo infantil sin batallar en la mesa, creando hábitos de salud sólidos, amorosos y llenos de color desde los primeros meses de vida.</p>
             <div class="hero-buttons">
                 <a href="#contacto" class="btn-cta">Reserva tu Consulta</a>
-                <a href="#espacios" class="btn-outline">Explorar Servicios</a>
+                <a href="#espacios" class="btn-outline">Ver Especialidades</a>
             </div>
         </div>
         <div class="hero-image">
             <div class="hero-card-float card-1">
-                <i class="fa-solid fa-child-reaching"></i>
+                <i class="fa-solid fa-bowl-food"></i>
                 <div>
-                    <strong>Nutrición Infantil</strong>
-                    <p style="font-size: 0.78rem; color: var(--gray);">Planes divertidos</p>
+                    <strong>Alimentación BLW</strong>
+                    <p style="font-size: 0.78rem; color: var(--gray);">Paso a paso seguro</p>
                 </div>
             </div>
             <div class="main-avatar-box">
-                <img src="imagenes/img2.jpg" alt="Kids & Nutrition Logo">
+                <img src="imagenes/img2.jpg" alt="Lic. Katia Valeria Nutrición Infantil">
             </div>
             <div class="hero-card-float card-2">
                 <i class="fa-solid fa-carrot"></i>
                 <div>
-                    <strong>Asesoría General</strong>
-                    <p style="font-size: 0.78rem; color: var(--gray);">Hábitos de vida</p>
+                    <strong>Niños Selectivos</strong>
+                    <p style="font-size: 0.78rem; color: var(--gray);">Sin peleas en la mesa</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- SECCIÓN DE BENEFICIOS PEDIÁTRICOS (ATRACTIVA PARA MAMÁS) -->
+    <div class="stats-section">
+        <div class="stat-item">
+            <i class="fa-solid fa-apple-whole"></i>
+            <h3>Enfoque Sin Restricciones</h3>
+            <p>Comer sano sin castigos, prohibiciones ni estrés en el hogar.</p>
+        </div>
+        <div class="stat-item">
+            <i class="fa-solid fa-baby"></i>
+            <h3>Especialistas en BLW</h3>
+            <p>Asesoría certificada para iniciar sólidos de forma segura y divertida.</p>
+        </div>
+        <div class="stat-item">
+            <i class="fa-solid fa-house-chimney-user"></i>
+            <h3>Planes para la Familia</h3>
+            <p>Menús prácticos, reales y adaptados al ritmo de casa.</p>
+        </div>
+        <div class="stat-item">
+            <i class="fa-solid fa-face-smile-beam"></i>
+            <h3>Cero Drama en la Mesa</h3>
+            <p>Estrategias lúdicas y pacientes para que amen las verduras.</p>
+        </div>
+    </div>
 
     <!-- SOBRE LA LICENCIADA -->
     <section class="about" id="sobre-mi">
         <div class="about-img-box">
-            <img src="imagenes/img1.jpeg" alt="Lic. Katia Valeria Ortega Díaz">
+            <img src="imagenes/img1.jpeg" alt="Nutrióloga Infantil Lic. Katia Valeria">
         </div>
         <div class="about-content">
-            <h3 style="color: var(--secondary);">Lic. Katia Valeria Ortega Díaz</h3>
-            <h3 style="font-size: 1.5rem; margin-bottom: 15px;">"Una buena alimentación en la infancia es el mejor regalo para el futuro"</h3>
-            <p>Hola, soy la Lic. Katia Valeria. Mi misión es romper con los mitos de las dietas restrictivas y aburridas. Creo firmemente que comer saludable debe ser un momento de conexión familiar, disfrute y bienestar físico.</p>
-            <p>Me especializo en acompañar a mamás y papás en el proceso de alimentación complementaria, selectividad alimentaria en niños ("picky eaters"), así como en nutrición clínica para adultos.</p>
+            <h3 style="color: var(--kids-pink);">Lic. Katia Valeria Ortega Díaz</h3>
+            <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--primary);">"Una buena alimentación en la infancia es el cimiento de toda una vida saludable."</h3>
+            <p>Hola, soy la Licenciada Katia Valeria. Mi enfoque profesional se centra en brindar acompañamiento clínico y humano a familias y pacientes que buscan optimizar su salud nutricional con bases científicas y sin dietas agresivas.</p>
+            <p>Me especializo en el desarrollo infantil temprano, alimentación complementaria segura (BLW), manejo clínico de selectividad alimentaria y educación nutricional familiar.</p>
             
             <div class="features-grid">
                 <div class="feature-item">
-                    <i class="fa-solid fa-check"></i> Enfoque sin restricciones
+                    <i class="fa-solid fa-check"></i> Enfoque lúdico y paciente
                 </div>
                 <div class="feature-item">
-                    <i class="fa-solid fa-check"></i> Asesoría cercana a mamás
+                    <i class="fa-solid fa-check"></i> Asesoría clínica cercana
                 </div>
                 <div class="feature-item">
-                    <i class="fa-solid fa-check"></i> Planes 100% personalizados
+                    <i class="fa-solid fa-check"></i> Menús familiares adaptados
                 </div>
                 <div class="feature-item">
-                    <i class="fa-solid fa-check"></i> Seguimiento por WhatsApp
+                    <i class="fa-solid fa-check"></i> Seguimiento continuo vía WhatsApp
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ESPACIOS / SERVICIOS CON TABS -->
+    <!-- SERVICIOS -->
     <section class="spaces-section" id="espacios">
         <div class="section-title">
             <h2>Nuestros Servicios Especializados</h2>
-            <p>Explora cada programa diseñado cuidadosamente para cada etapa de tu vida y la de tus hijos.</p>
+            <p>Programas clínicos y nutricionales diseñados con cariño para cuidar el bienestar de tus hijos y de toda la familia.</p>
         </div>
 
         <div class="tabs-nav">
             <button class="tab-btn active" onclick="switchTab(event, 'infantil')"><i class="fa-solid fa-baby-carriage"></i> Nutrición Infantil</button>
             <button class="tab-btn" onclick="switchTab(event, 'general')"><i class="fa-solid fa-plate-wheat"></i> Nutrición General</button>
-            <button class="tab-btn" onclick="switchTab(event, 'educativo')"><i class="fa-solid fa-book-open-reader"></i> Blog & Comunidad</button>
+            <button class="tab-btn" onclick="switchTab(event, 'educativo')"><i class="fa-solid fa-book-open-reader"></i> Tips y Blog</button>
         </div>
 
         <!-- TAB INFANTIL -->
@@ -783,33 +810,33 @@
             <div class="service-card kids">
                 <i class="fa-solid fa-bowl-food"></i>
                 <h4>Alimentación Complementaria (BLW)</h4>
-                <p>Guía paso a paso para iniciar a tu bebé en el mundo de los sólidos con total seguridad, previniendo alergias y creando buenos hábitos.</p>
+                <p>Guía experta paso a paso para iniciar al bebé en el mundo de los sólidos con total seguridad, previniendo riesgos y fomentando autonomía.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Menús adaptados por mes</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Cortes y texturas seguras por mes</li>
                     <li><i class="fa-solid fa-circle-check"></i> Prevención de atragantamiento</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Recetas especiales para papás</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Recetarios prácticos para la familia</li>
                 </ul>
             </div>
 
             <div class="service-card kids">
                 <i class="fa-solid fa-face-smile-beam"></i>
                 <h4>Manejo de Niños Selectivos</h4>
-                <p>¿Tu hijo rechaza verduras o grupos enteros? Aplicamos estrategias basadas en psicología y nutrición lúdica sin peleas en la mesa.</p>
+                <p>¿El pequeño rechaza verduras o grupos enteros? Aplicamos estrategias basadas en psicología conductual y nutrición lúdica.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Exposición sensorial</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Loncheras escolares divertidas</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Armonía y paz en familia</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Exposición sensorial sin estrés</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Planificación de loncheras escolares</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Restauración de la paz en la mesa</li>
                 </ul>
             </div>
 
             <div class="service-card kids">
                 <i class="fa-solid fa-chart-line"></i>
                 <h4>Control de Crecimiento Infantil</h4>
-                <p>Evaluación con curvas OMS y rediseño de hábitos familiares para asegurar un desarrollo fuerte, activo y sumamente feliz.</p>
+                <p>Evaluación antropométrica con curvas OMS y optimización de hábitos para asegurar un desarrollo fuerte, activo y saludable.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Evaluación antropométrica</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Porciones ideales para mamás</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Guía de actividad física</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Somatometría y percentiles</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Guía de porciones familiares</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Pautas de actividad física</li>
                 </ul>
             </div>
         </div>
@@ -819,55 +846,55 @@
             <div class="service-card">
                 <i class="fa-solid fa-weight-scale"></i>
                 <h4>Control de Peso Saludable</h4>
-                <p>Olvida las dietas restrictivas. Aprende a nutrir tu cuerpo con alimentos reales, disfrutando lo que te gusta sin culpa ni efecto rebote.</p>
+                <p>Olvida las restricciones extremas. Aprende a nutrir tu organismo con alimentos reales disfrutando cada proceso sin culpa.</p>
                 <ul class="service-list">
                     <li><i class="fa-solid fa-circle-check"></i> Distribución de macronutrientes</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Listas de súper inteligentes</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Educación nutricional continua</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Educación de hábitos sostenibles</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Listas inteligentes para el súper</li>
                 </ul>
             </div>
 
             <div class="service-card">
                 <i class="fa-solid fa-heart-pulse"></i>
-                <h4>Nutrición Clínica & Metabólica</h4>
-                <p>Asesoría especializada para resistencia a la insulina, ovario poliquístico (SOP), hipertensión y salud digestiva.</p>
+                <h4>Nutrición Clínica y Metabólica</h4>
+                <p>Asesoría especializada para resistencia a la insulina, síndrome de ovario poliquístico (SOP), hipertensión y salud digestiva.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Interpretación de laboratorios</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Reducción de inflamación</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Suplementación sugerida</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Interpretación clínica de laboratorios</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Protocolos antiinflamatorios</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Guías de suplementación sugerida</li>
                 </ul>
             </div>
 
             <div class="service-card">
                 <i class="fa-solid fa-person-running"></i>
-                <h4>Nutrición para la Mujer & Ciclo</h4>
-                <p>Sincroniza tus comidas con tu ciclo menstrual para mejorar la energía, reducir cólicos y equilibrar hormonas naturalmente.</p>
+                <h4>Nutrición para la Mujer y Ciclo</h4>
+                <p>Sincronización nutricional con el ciclo menstrual para equilibrar hormonas, optimizar energía y disminuir síntomas molestos.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Alimentación por fases del ciclo</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Alimentación por fases hormonales</li>
                     <li><i class="fa-solid fa-circle-check"></i> Manejo del estrés y cortisol</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Vitalidad y bienestar diario</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Vitalidad y bienestar integral</li>
                 </ul>
             </div>
         </div>
 
         <!-- TAB EDUCATIVO -->
         <div id="educativo" class="tab-content">
-            <div class="service-card" style="border-top-color: var(--secondary);">
-                <i class="fa-solid fa-newspaper" style="color: var(--secondary);"></i>
-                <h4>Blog de Mamás y Salud</h4>
-                <p>Artículos semanales con tips rápidos sobre lectura de etiquetas, mitos de azúcares y snacks escolares.</p>
+            <div class="service-card" style="border-top-color: var(--kids-pink);">
+                <i class="fa-solid fa-newspaper" style="color: var(--kids-pink);"></i>
+                <h4>Blog de Salud Familiar</h4>
+                <p>Artículos especializados sobre lectura de etiquetas nutrimentales, mitos de azúcares y snacks escolares.</p>
             </div>
 
-            <div class="service-card" style="border-top-color: var(--secondary);">
-                <i class="fa-solid fa-comments" style="color: var(--secondary);"></i>
-                <h4>Artículos & Consejos Médicos</h4>
-                <p>Información especializada basada en evidencia científica para el cuidado de la salud familiar.</p>
+            <div class="service-card" style="border-top-color: var(--kids-pink);">
+                <i class="fa-solid fa-comments" style="color: var(--kids-pink);"></i>
+                <h4>Guías de Pediatría</h4>
+                <p>Información respaldada en evidencia científica para el cuidado óptimo de la salud infantil en el hogar.</p>
             </div>
 
-            <div class="service-card" style="border-top-color: var(--secondary);">
-                <i class="fa-solid fa-apple-whole" style="color: var(--secondary);"></i>
-                <h4>Comunidad de Apoyo Familiar</h4>
-                <p>Un espacio cálido donde compartimos experiencias, retos diarios y tips de cocina saludable.</p>
+            <div class="service-card" style="border-top-color: var(--kids-pink);">
+                <i class="fa-solid fa-apple-whole" style="color: var(--kids-pink);"></i>
+                <h4>Comunidad de Apoyo</h4>
+                <p>Espacio colaborativo donde compartimos experiencias, retos diarios y recetas de cocina saludable.</p>
             </div>
         </div>
     </section>
@@ -876,14 +903,14 @@
     <section class="interactive-tools">
         <div class="tool-info">
             <h3>Calcula tu IMC Profesional</h3>
-            <p>El Índice de Masa Corporal (IMC) se calcula dividiendo el peso en kilogramos entre la altura en metros al cuadrado. Esta herramienta te orienta de forma confidencial adaptando la perspectiva clínica.</p>
-            <div style="display: flex; gap: 12px; font-weight: 600; align-items: center; margin-top: 15px;">
-                <i class="fa-solid fa-shield-heart" style="font-size: 1.8rem;"></i>
-                <span>Parámetros adaptados y confidenciales.</span>
+            <p>El Índice de Masa Corporal (IMC) es un parámetro clínico orientativo que relaciona el peso y la talla. Esta herramienta te proporciona una perspectiva inicial confidencial respaldada por criterios médicos.</p>
+            <div style="display: flex; gap: 12px; font-weight: 600; align-items: center; margin-top: 20px;">
+                <i class="fa-solid fa-shield-heart" style="font-size: 2rem; color: var(--kids-yellow);"></i>
+                <span>Evaluación orientativa bajo estándares clínicos.</span>
             </div>
         </div>
         <div class="imc-calculator">
-            <h4><i class="fa-solid fa-calculator"></i> Calculadora con Género</h4>
+            <h4><i class="fa-solid fa-calculator"></i> Calculadora Clínica de IMC</h4>
             <div class="form-group">
                 <label>Género:</label>
                 <select id="genero">
@@ -892,7 +919,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>Peso (kg):</label>
+                <label>Peso actual (kg):</label>
                 <input type="number" id="peso" placeholder="Ej. 65" step="0.1">
             </div>
             <div class="form-group">
@@ -908,7 +935,7 @@
     <section class="faq-section" id="faq">
         <div class="section-title">
             <h2>Preguntas Frecuentes</h2>
-            <p>Resolvemos las dudas más comunes antes de iniciar tu proceso nutricional.</p>
+            <p>Resolvemos las dudas clínicas más comunes antes de iniciar el proceso nutricional.</p>
         </div>
         <div class="faq-container">
             <div class="faq-item" onclick="toggleFaq(this)">
@@ -917,27 +944,27 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    ¡Ambas modalidades están disponibles! Contamos con consultorio en Metepec y atención online global por videollamada.
+                    ¡Ambas modalidades están disponibles! Contamos con consultorio equipado en Metepec y atención digital segura por videollamada para pacientes foráneos o internacionales.
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>¿A qué edad inicia la alimentación complementaria?</span>
+                    <span>¿A qué edad exacta inicia la alimentación complementaria?</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Se recomienda iniciar alrededor de los 6 meses de edad, cuando el bebé sostiene su cabeza y muestra interés por la comida.
+                    Los lineamientos pediátricos internacionales recomiendan iniciar alrededor de los 6 meses, siempre que el bebé mantenga control cefálico y muestre interés activo por los alimentos.
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>¿Los planes prohíben alimentos?</span>
+                    <span>¿Los planes nutricionales prohíben alimentos a los niños?</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    ¡No! Nuestro enfoque es sin restricciones estrictas. Buscamos crear hábitos flexibles para disfrutar en familia.
+                    ¡De ninguna manera! Nuestro enfoque rechaza las prohibiciones estrictas. Fomentamos la flexibilidad metabólica y una relación sana y sin traumas con la comida en familia.
                 </div>
             </div>
         </div>
@@ -946,20 +973,20 @@
     <!-- CONTACTO Y CITAS -->
     <section class="appointment-section" id="contacto">
         <div class="section-title">
-            <h2>Agenda tu Cita con la Lic. Katia Valeria</h2>
-            <p>Da el primer paso hacia una vida más saludable. Llena el formulario y te atenderemos de inmediato.</p>
+            <h2>Agenda tu Cita Profesional</h2>
+            <p>Da el paso definitivo hacia una salud óptima. Llena el formulario y nos pondremos en contacto contigo.</p>
         </div>
 
         <div class="appointment-grid">
             <div class="appointment-info">
                 <h3>Estamos listas para acompañarte</h3>
-                <p>Cada consulta está diseñada para escucharte, entender tus retos diarios y diseñar un plan realista.</p>
+                <p>Cada consulta está estructurada para escuchar con atención a las familias, evaluar objetivos clínicos y trazar un plan realista y sostenible.</p>
                 
                 <div class="contact-methods">
-                    <a href="https://wa.me/5215561901308?text=Hola%20Lic.%20Katia,%20me%20gustaría%20agendar%20una%20cita" target="_blank" class="contact-box">
+                    <a href="https://wa.me/5215561901308?text=Hola%20Nutrióloga%20Katia,%20me%20gustaría%20agendar%20una%20cita" target="_blank" class="contact-box">
                         <i class="fa-brands fa-whatsapp"></i>
                         <div>
-                            <h5>WhatsApp</h5>
+                            <h5>WhatsApp Directo</h5>
                             <p>+52 1 55 6190 1308</p>
                         </div>
                     </a>
@@ -975,8 +1002,8 @@
                     <a href="https://maps.google.com/?q=19.265282,-99.628807" target="_blank" class="contact-box">
                         <i class="fa-solid fa-location-dot"></i>
                         <div>
-                            <h5>Consultorio</h5>
-                            <p>Antiguo Camino a Metepec 203, Metepec</p>
+                            <h5>Consultorio Médico</h5>
+                            <p>Antiguo Camino a Metepec 203</p>
                         </div>
                     </a>
                 </div>
@@ -985,26 +1012,26 @@
             <div class="appointment-form">
                 <form id="form-cita" onsubmit="enviarCitaTelegram(event)">
                     <div class="form-group">
-                        <label>Nombre Completo:</label>
-                        <input type="text" id="nombre" required placeholder="Tu nombre">
+                        <label>Nombre del Padre, Madre o Tutor:</label>
+                        <input type="text" id="nombre" required placeholder="Tu nombre completo">
                     </div>
                     <div class="form-group">
                         <label>Teléfono / WhatsApp:</label>
                         <input type="tel" id="telefono" required placeholder="10 dígitos">
                     </div>
                     <div class="form-group">
-                        <label>Tipo de Consulta:</label>
+                        <label>Tipo de Consulta Requerida:</label>
                         <select id="tipo-consulta">
-                            <option value="Nutrición Infantil">Nutrición Infantil</option>
-                            <option value="Nutrición General">Nutrición General</option>
-                            <option value="Nutrición Clínica">Nutrición Clínica</option>
+                            <option value="Nutrición Infantil y BLW">Nutrición Infantil y BLW</option>
+                            <option value="Nutrición General y Control de Peso">Nutrición General y Control de Peso</option>
+                            <option value="Nutrición Clínica y Hormonal">Nutrición Clínica y Hormonal</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Objetivos:</label>
-                        <textarea id="mensaje" placeholder="Cuéntanos brevemente..."></textarea>
+                        <label>Objetivos del paciente o pequeño:</label>
+                        <textarea id="mensaje" placeholder="Ej. Quisiera asesoría nutricional para mi hijo de 3 años..."></textarea>
                     </div>
-                    <button type="submit" class="btn-cta" style="width: 100%; border: none; padding: 14px; font-size: 1rem; cursor: pointer;">Solicitar Cita</button>
+                    <button type="submit" class="btn-cta" style="width: 100%; border: none; padding: 16px; font-size: 1.05rem; cursor: pointer;">Solicitar Cita con la Nutrióloga</button>
                 </form>
             </div>
         </div>
@@ -1014,7 +1041,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <i class="fa-solid fa-apple-whole" style="color: var(--secondary);"></i>
+                <i class="fa-solid fa-apple-whole" style="color: var(--kids-pink);"></i>
                 Lic. Katia Valeria Ortega Díaz
             </div>
             <div class="social-icons">
@@ -1023,7 +1050,7 @@
                 <a href="https://wa.me/5215561901308" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
-        <p class="copyright">&copy; 2026 Lic. Katia Valeria Ortega Díaz. Todos los derechos reservados.</p>
+        <p class="copyright">&copy; 2026 Lic. Katia Valeria Ortega Díaz. Todos los derechos reservados. Excelencia en Nutrición Pediátrica y Clínica.</p>
     </footer>
 
     <!-- SCRIPT -->
@@ -1050,16 +1077,16 @@
 
             if(!peso || !altura || peso <= 0 || altura <= 0) {
                 res.style.display = 'block';
-                res.innerHTML = '⚠️ Ingresa valores válidos.';
+                res.innerHTML = '⚠️ Ingresa valores válidos para el cálculo.';
                 return;
             }
 
             const imc = peso / (altura * altura);
             let txt = `IMC: ${imc.toFixed(1)} (${genero}) - `;
-            if(imc < 18.5) txt += 'Peso bajo.';
-            else if(imc < 25) txt += '¡Peso saludable!';
-            else if(imc < 30) txt += 'Sobrepeso.';
-            else txt += 'Rango elevado.';
+            if(imc < 18.5) txt += 'Peso bajo (Requiere valoración).';
+            else if(imc < 25) txt += '¡Rango de peso saludable!';
+            else if(imc < 30) txt += 'Sobrepeso (Asesoría recomendada).';
+            else txt += 'Rango elevado (Atención clínica sugerida).';
 
             res.style.display = 'block';
             res.innerHTML = txt;
@@ -1070,12 +1097,12 @@
             const nombre = document.getElementById('nombre').value;
             const telefono = document.getElementById('telefono').value;
             const tipo = document.getElementById('tipo-consulta').value;
-            const mensaje = document.getElementById('mensaje').value || 'Sin comentarios';
+            const mensaje = document.getElementById('mensaje').value || 'Sin comentarios adicionales';
 
             const tokenBot = '9010945309:AAF5Jw9X5djQR_mho2lMWhtI4I08SHWAabA'; 
             const chatId = '9243715537'; 
 
-            const texto = `🚨 *¡Nueva Cita Web!* 🚨\n\n👤 *Nombre:* ${nombre}\n📞 *Teléfono:* ${telefono}\n🩺 *Tipo:* ${tipo}\n💬 *Mensaje:* ${mensaje}`;
+            const texto = `🏥 *¡Nueva Solicitud de Cita Web!* 🏥\n\n👤 *Tutor/Paciente:* ${nombre}\n📞 *Teléfono:* ${telefono}\n🩺 *Tipo:* ${tipo}\n💬 *Mensaje:* ${mensaje}`;
 
             fetch(`https://api.telegram.org/bot${tokenBot}/sendMessage`, {
                 method: 'POST',
@@ -1084,13 +1111,13 @@
             })
             .then(res => {
                 if(res.ok) {
-                    alert(`¡Gracias ${nombre}! Tu cita fue enviada con éxito.`);
+                    alert(`¡Gracias ${nombre}! Tu solicitud fue enviada con éxito a la Lic. Katia.`);
                     document.getElementById('form-cita').reset();
                 } else {
-                    alert('Error al enviar. Intenta por WhatsApp.');
+                    alert('Error al enviar. Intenta por WhatsApp directo.');
                 }
             })
-            .catch(() => alert('Error de conexión.'));
+            .catch(() => alert('Error de red al conectar con el servidor.'));
         }
     </script>
 </body>
