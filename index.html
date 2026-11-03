@@ -45,27 +45,26 @@
             font-family: 'Outfit', sans-serif;
         }
 
-        /* HEADER LIMPIO Y MODERNO */
+        /* HEADER ULTRA RESPONSIVE */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(15px);
             box-shadow: 0 4px 25px rgba(0,0,0,0.05);
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 5%;
-            transition: 0.3s;
+            padding: 12px 4%;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
         }
 
@@ -77,7 +76,7 @@
 
         .brand-row-1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.35rem;
+            font-size: 1.2rem;
             font-weight: 800;
             letter-spacing: -0.5px;
         }
@@ -87,24 +86,25 @@
 
         .brand-row-2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #7C3AED;
             letter-spacing: 0.5px;
         }
 
         .logo-subtitle {
-            font-size: 0.72rem;
+            font-size: 0.65rem;
             color: var(--gray);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
+        /* Menú de navegación móvil */
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 15px;
             align-items: center;
         }
 
@@ -112,7 +112,7 @@
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             transition: 0.3s;
         }
 
@@ -121,25 +121,26 @@
         .btn-cta {
             background: linear-gradient(135deg, var(--kids-pink), #FF8E53);
             color: var(--white) !important;
-            padding: 10px 24px;
+            padding: 8px 18px;
             border-radius: 35px;
             font-weight: 600 !important;
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.35);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+            transition: all 0.3s;
+            white-space: nowrap;
         }
 
         .btn-cta:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(255, 107, 107, 0.4);
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION OPTIMIZADO PARA MÓVIL */
         .hero {
-            padding: 160px 5% 80px 5%;
+            padding: 130px 4% 60px 4%;
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
-            gap: 50px;
+            gap: 30px;
             background: radial-gradient(circle at 90% 10%, rgba(255, 107, 107, 0.08), transparent 40%),
                         radial-gradient(circle at 10% 90%, rgba(255, 217, 61, 0.15), transparent 40%);
             position: relative;
@@ -152,13 +153,13 @@
             z-index: 1;
             animation: floatSlow 6s ease-in-out infinite;
         }
-        .bubble-1 { width: 90px; height: 90px; top: 120px; left: 4%; }
-        .bubble-2 { width: 60px; height: 60px; bottom: 40px; left: 42%; animation-delay: 2s; background: rgba(255, 217, 61, 0.2); }
-        .bubble-3 { width: 110px; height: 110px; top: 80px; right: 5%; animation-delay: 4s; background: rgba(13, 148, 136, 0.06); }
+        .bubble-1 { width: 70px; height: 70px; top: 100px; left: 3%; }
+        .bubble-2 { width: 50px; height: 50px; bottom: 20px; left: 40%; animation-delay: 2s; background: rgba(255, 217, 61, 0.2); }
+        .bubble-3 { width: 80px; height: 80px; top: 60px; right: 4%; animation-delay: 4s; background: rgba(13, 148, 136, 0.06); }
 
         @keyframes floatSlow {
             0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-15px) scale(1.05); }
+            50% { transform: translateY(-10px) scale(1.03); }
         }
 
         .hero-content { position: relative; z-index: 2; }
@@ -166,42 +167,42 @@
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             background: var(--white);
-            padding: 8px 18px;
+            padding: 6px 14px;
             border-radius: 30px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             color: var(--kids-pink);
             font-weight: 600;
-            font-size: 0.88rem;
-            margin-bottom: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
             border: 2px solid rgba(255, 107, 107, 0.2);
         }
 
         .hero-content h2 {
-            font-size: 3.2rem;
+            font-size: 2.6rem;
             line-height: 1.15;
             color: var(--primary-dark);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .hero-content h2 span {
             color: var(--kids-pink);
             background: rgba(255, 107, 107, 0.1);
-            padding: 0 8px;
-            border-radius: 8px;
+            padding: 0 6px;
+            border-radius: 6px;
         }
 
         .hero-content p {
-            font-size: 1.05rem;
+            font-size: 0.98rem;
             color: var(--gray);
-            margin-bottom: 30px;
-            line-height: 1.7;
+            margin-bottom: 25px;
+            line-height: 1.6;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 14px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
@@ -209,16 +210,12 @@
             background: transparent;
             border: 2px solid var(--secondary);
             color: var(--secondary);
-            padding: 10px 24px;
+            padding: 8px 18px;
             border-radius: 35px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .btn-outline:hover {
-            background: var(--secondary);
-            color: var(--white);
+            font-size: 0.9rem;
         }
 
         .hero-image {
@@ -233,45 +230,43 @@
             position: absolute;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
-            padding: 16px 20px;
-            border-radius: 20px;
+            padding: 10px 14px;
+            border-radius: 16px;
             box-shadow: var(--shadow);
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
             z-index: 3;
-            max-width: 250px;
+            max-width: 210px;
             border-left: 4px solid var(--kids-pink);
             animation: floatSlow 4s ease-in-out infinite;
         }
 
-        .hero-card-float.card-1 { top: 20px; left: -10px; }
-        .hero-card-float.card-2 { bottom: 30px; right: -10px; animation-delay: 2s; border-left-color: var(--kids-yellow); }
+        .hero-card-float.card-1 { top: 10px; left: -5px; }
+        .hero-card-float.card-2 { bottom: 15px; right: -5px; animation-delay: 2s; border-left-color: var(--kids-yellow); }
 
         .hero-card-float i {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: var(--kids-pink);
             background: rgba(255, 107, 107, 0.12);
-            padding: 12px;
-            border-radius: 14px;
+            padding: 8px;
+            border-radius: 10px;
         }
-
-        .hero-card-float.card-2 i { color: #D97706; background: #FEF3C7; }
 
         .main-avatar-box {
             width: 100%;
-            max-width: 400px;
-            height: 420px;
+            max-width: 350px;
+            height: 380px;
             background: linear-gradient(145deg, #ffffff, var(--kids-bg));
-            border-radius: 36px;
+            border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             position: relative;
             overflow: hidden;
             border: 4px solid var(--kids-yellow);
-            padding: 20px;
+            padding: 15px;
             margin: 0 auto;
         }
 
@@ -279,76 +274,70 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 24px;
+            border-radius: 20px;
         }
 
-        /* SECCIÓN DE BENEFICIOS PEDIÁTRICOS (TIPO RINCÓN INFANTIL) */
+        /* SECCIÓN DE BENEFICIOS PEDIÁTRICOS */
         .stats-section {
             background: var(--white);
-            padding: 50px 5%;
-            margin: 0 5% 50px 5%;
+            padding: 40px 4%;
+            margin: 0 4% 40px 4%;
             border-radius: var(--radius);
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             text-align: center;
             box-shadow: var(--shadow);
             border: 2px dashed rgba(255, 217, 61, 0.6);
         }
 
         .stat-item {
-            padding: 20px;
-            border-radius: 18px;
+            padding: 15px;
+            border-radius: 16px;
             transition: 0.3s;
         }
 
-        .stat-item:hover {
-            background: #FFFDF4;
-            transform: translateY(-5px);
-        }
-
         .stat-item i {
-            font-size: 2.2rem;
+            font-size: 2rem;
             color: var(--kids-pink);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             background: rgba(255, 107, 107, 0.1);
-            padding: 15px;
+            padding: 12px;
             border-radius: 50%;
         }
 
         .stat-item h3 {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             color: var(--primary-dark);
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .stat-item p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--gray);
-            font-weight: 500;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         /* SOBRE LA LICENCIADA */
         .about {
-            padding: 80px 5%;
+            padding: 60px 4%;
             background: var(--white);
             display: grid;
             grid-template-columns: 1fr 1.15fr;
-            gap: 60px;
+            gap: 40px;
             align-items: center;
         }
 
         .about-img-box {
             background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(255,217,61,0.15));
-            border-radius: 36px;
-            padding: 12px;
+            border-radius: 30px;
+            padding: 10px;
             border: 3px solid var(--kids-pink);
             box-shadow: 0 15px 35px rgba(255, 107, 107, 0.12);
             width: 100%;
-            max-width: 390px;
-            height: 460px;
+            max-width: 350px;
+            height: 400px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -360,132 +349,127 @@
             height: 100%;
             object-fit: cover;
             object-position: center top;
-            border-radius: 24px;
+            border-radius: 20px;
         }
 
-        .about-content h3 { font-size: 2.4rem; margin-bottom: 20px; color: var(--primary-dark); }
-        .about-content p { color: var(--gray); margin-bottom: 20px; line-height: 1.7; font-size: 1.02rem; }
+        .about-content h3 { font-size: 2.1rem; margin-bottom: 15px; color: var(--primary-dark); }
+        .about-content p { color: var(--gray); margin-bottom: 15px; line-height: 1.6; font-size: 0.96rem; }
 
         .features-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 30px;
+            gap: 12px;
+            margin-top: 20px;
         }
 
         .feature-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             font-weight: 600;
             color: var(--dark);
-            font-size: 0.92rem;
+            font-size: 0.86rem;
             background: var(--light);
-            padding: 14px 18px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            transition: 0.3s;
+            padding: 12px 14px;
+            border-radius: 14px;
         }
-        .feature-item:hover { transform: translateX(4px); background: rgba(255,107,107,0.05); }
-        .feature-item i { color: var(--kids-pink); background: var(--white); padding: 8px; border-radius: 50%; }
+        .feature-item i { color: var(--kids-pink); background: var(--white); padding: 6px; border-radius: 50%; }
 
         /* SERVICIOS */
-        .spaces-section { padding: 90px 5%; background: var(--light); }
-        .section-title { text-align: center; max-width: 650px; margin: 0 auto 45px auto; }
-        .section-title h2 { font-size: 2.8rem; margin-bottom: 14px; color: var(--primary-dark); }
-        .section-title p { color: var(--gray); font-size: 1.05rem; }
+        .spaces-section { padding: 60px 4%; background: var(--light); }
+        .section-title { text-align: center; max-width: 600px; margin: 0 auto 35px auto; }
+        .section-title h2 { font-size: 2.3rem; margin-bottom: 10px; color: var(--primary-dark); }
+        .section-title p { color: var(--gray); font-size: 0.98rem; }
 
-        .tabs-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+        .tabs-nav { display: flex; justify-content: center; gap: 8px; margin-bottom: 30px; flex-wrap: wrap; }
         .tab-btn {
             background: var(--white);
             border: none;
-            padding: 14px 28px;
-            border-radius: 35px;
+            padding: 10px 18px;
+            border-radius: 30px;
             font-weight: 600;
-            font-size: 0.96rem;
+            font-size: 0.88rem;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             color: var(--gray);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             transition: 0.3s;
         }
 
         .tab-btn.active, .tab-btn:hover {
             background: var(--kids-pink);
             color: var(--white);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.35);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
         }
 
-        .tab-content { display: none; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .tab-content { display: none; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
         .tab-content.active { display: grid; }
 
         .service-card {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 40px 30px;
+            padding: 30px 22px;
             box-shadow: var(--shadow);
             border-top: 6px solid var(--primary);
             transition: 0.3s;
         }
 
-        .service-card:hover { transform: translateY(-8px); }
         .service-card.kids { border-top-color: var(--kids-pink); }
 
-        .service-card i { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; display: inline-block; transition: 0.3s; }
-        .service-card:hover i { transform: scale(1.1) rotate(5deg); }
+        .service-card i { font-size: 2.4rem; color: var(--primary); margin-bottom: 15px; display: inline-block; }
         .service-card.kids i { color: var(--kids-pink); }
 
-        .service-card h4 { font-size: 1.4rem; margin-bottom: 14px; color: var(--primary-dark); }
-        .service-card p { color: var(--gray); font-size: 0.96rem; margin-bottom: 20px; line-height: 1.6; }
+        .service-card h4 { font-size: 1.25rem; margin-bottom: 12px; color: var(--primary-dark); }
+        .service-card p { color: var(--gray); font-size: 0.92rem; margin-bottom: 15px; line-height: 1.5; }
 
         .service-list { list-style: none; }
         .service-list li {
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             color: var(--dark);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
-        .service-list li i { font-size: 0.82rem; color: var(--kids-pink); margin-bottom: 0; transform: none !important; }
+        .service-list li i { font-size: 0.78rem; color: var(--kids-pink); margin-bottom: 0; }
 
         /* CALCULADORA IMC */
         .interactive-tools {
-            padding: 90px 5%;
+            padding: 60px 4%;
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: var(--white);
-            border-radius: 40px;
-            margin: 0 5%;
+            border-radius: 30px;
+            margin: 0 4%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 30px;
             align-items: center;
-            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.3);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
         }
 
-        .tool-info h3 { font-size: 2.8rem; margin-bottom: 20px; }
-        .tool-info p { font-size: 1.05rem; opacity: 0.95; line-height: 1.7; }
+        .tool-info h3 { font-size: 2.3rem; margin-bottom: 15px; }
+        .tool-info p { font-size: 0.98rem; opacity: 0.95; line-height: 1.6; }
 
         .imc-calculator {
             background: var(--white);
             color: var(--dark);
-            padding: 40px;
+            padding: 30px 22px;
             border-radius: var(--radius);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
-        .imc-calculator h4 { font-size: 1.6rem; margin-bottom: 20px; color: var(--primary-dark); text-align: center; }
+        .imc-calculator h4 { font-size: 1.4rem; margin-bottom: 15px; color: var(--primary-dark); text-align: center; }
 
-        .form-group { margin-bottom: 18px; }
-        .form-group label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; }
+        .form-group { margin-bottom: 14px; }
+        .form-group label { display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 4px; }
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 14px 18px;
+            padding: 12px 14px;
             border: 2px solid #E2E8F0;
-            border-radius: 16px;
-            font-size: 0.96rem;
+            border-radius: 12px;
+            font-size: 0.92rem;
             background: var(--light);
             outline: none;
             transition: 0.3s;
@@ -501,46 +485,44 @@
             background: var(--kids-pink);
             color: var(--white);
             border: none;
-            padding: 14px;
-            border-radius: 16px;
+            padding: 12px;
+            border-radius: 12px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: 0.3s;
-            margin-top: 8px;
+            margin-top: 6px;
         }
         .btn-calc:hover { background: #e05555; }
 
         #imc-result {
-            margin-top: 16px;
+            margin-top: 14px;
             text-align: center;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             background: rgba(255, 107, 107, 0.1);
-            padding: 14px;
-            border-radius: 12px;
+            padding: 12px;
+            border-radius: 10px;
             display: none;
             border: 1px dashed var(--kids-pink);
             color: var(--kids-pink);
         }
 
         /* FAQ */
-        .faq-section { padding: 90px 5%; background: var(--white); }
-        .faq-container { max-width: 750px; margin: 0 auto; }
+        .faq-section { padding: 60px 4%; background: var(--white); }
+        .faq-container { max-width: 700px; margin: 0 auto; }
         .faq-item {
             background: var(--light);
-            border-radius: 16px;
-            margin-bottom: 16px;
+            border-radius: 14px;
+            margin-bottom: 12px;
             overflow: hidden;
             border: 1px solid #E2E8F0;
-            transition: 0.3s;
         }
-        .faq-item:hover { border-color: var(--kids-pink); }
 
         .faq-question {
-            padding: 20px 24px;
+            padding: 16px 20px;
             font-weight: 600;
-            font-size: 1.02rem;
+            font-size: 0.96rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -554,63 +536,62 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.4s ease;
-            padding: 0 24px;
+            padding: 0 20px;
             color: var(--gray);
-            font-size: 0.96rem;
-            line-height: 1.6;
+            font-size: 0.92rem;
+            line-height: 1.5;
         }
-        .faq-item.active .faq-answer { max-height: 220px; padding: 0 24px 20px 24px; }
+        .faq-item.active .faq-answer { max-height: 200px; padding: 0 20px 16px 20px; }
 
         /* CONTACTO Y CITAS */
-        .appointment-section { padding: 90px 5%; background: var(--light); }
+        .appointment-section { padding: 60px 4%; background: var(--light); }
         .appointment-grid {
             display: grid;
             grid-template-columns: 1fr 1.15fr;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
             background: var(--white);
-            padding: 50px;
-            border-radius: 36px;
+            padding: 40px 30px;
+            border-radius: 30px;
             box-shadow: var(--shadow);
         }
 
-        .appointment-info h3 { font-size: 2.5rem; margin-bottom: 18px; color: var(--primary-dark); }
-        .appointment-info p { color: var(--gray); margin-bottom: 30px; line-height: 1.7; font-size: 1.02rem; }
+        .appointment-info h3 { font-size: 2.2rem; margin-bottom: 15px; color: var(--primary-dark); }
+        .appointment-info p { color: var(--gray); margin-bottom: 25px; line-height: 1.6; font-size: 0.98rem; }
 
-        .contact-methods { display: flex; flex-direction: column; gap: 16px; }
+        .contact-methods { display: flex; flex-direction: column; gap: 14px; }
         .contact-box {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
             background: var(--light);
-            padding: 18px 22px;
-            border-radius: 18px;
+            padding: 14px 18px;
+            border-radius: 14px;
             text-decoration: none;
             color: inherit;
             transition: 0.3s;
         }
-        .contact-box:hover { background: var(--white); transform: translateX(6px); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
-        .contact-box i { font-size: 1.6rem; color: var(--kids-pink); background: rgba(255, 107, 107, 0.1); padding: 14px; border-radius: 16px; }
-        .contact-box h5 { font-size: 0.85rem; color: var(--gray); }
-        .contact-box p { font-size: 0.98rem; font-weight: 600; color: var(--dark); margin: 0; }
+        .contact-box i { font-size: 1.4rem; color: var(--kids-pink); background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 12px; }
+        .contact-box h5 { font-size: 0.8rem; color: var(--gray); }
+        .contact-box p { font-size: 0.92rem; font-weight: 600; color: var(--dark); margin: 0; }
 
-        .appointment-form textarea { resize: none; height: 130px; }
+        .appointment-form textarea { resize: none; height: 110px; }
 
         /* WHATSAPP FLOTANTE */
         .whatsapp-float {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
+            bottom: 20px;
+            right: 20px;
             background: #25d366;
             color: white;
-            width: 62px;
-            height: 62px;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            font-size: 2rem;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 9999;
             text-decoration: none;
             transition: 0.3s;
@@ -618,24 +599,24 @@
         .whatsapp-float:hover { transform: scale(1.1); }
 
         /* FOOTER */
-        footer { background: var(--primary-dark); color: var(--white); padding: 70px 5% 35px 5%; text-align: center; }
+        footer { background: var(--primary-dark); color: var(--white); padding: 50px 4% 30px 4%; text-align: center; }
         .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 35px;
-            margin-bottom: 35px;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
         }
-        .footer-logo { font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 12px; }
-        .social-icons { display: flex; gap: 14px; }
+        .footer-logo { font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        .social-icons { display: flex; gap: 12px; }
         .social-icons a {
             background: rgba(255,255,255,0.1);
             color: var(--white);
-            width: 46px;
-            height: 46px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -643,30 +624,33 @@
             text-decoration: none;
             transition: 0.3s;
         }
-        .social-icons a:hover { background: var(--kids-pink); transform: translateY(-3px); }
-        .copyright { font-size: 0.9rem; color: #94A3B8; }
+        .copyright { font-size: 0.85rem; color: #94A3B8; }
 
-        /* MEDIA QUERIES */
+        /* RESPONSIVE BREAKPOINTS PARA MOVILES (SMARTPHONES) */
         @media(max-width: 968px) {
-            header { padding: 12px 4%; }
-            nav ul { display: none; }
+            header { padding: 10px 4%; }
+            nav ul li:not(:last-child) { display: none; } /* Oculta enlaces menores en cel para dejar limpio el botón Agendar */
             .hero, .about, .interactive-tools, .appointment-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
-                padding-top: 130px;
+                gap: 30px;
+                padding-top: 110px;
             }
-            .hero-content h2 { font-size: 2.4rem; }
-            .hero-card-float { padding: 12px 16px; max-width: 190px; }
-            .hero-card-float strong { font-size: 0.85rem; }
-            .hero-card-float p { font-size: 0.72rem !important; }
-            .interactive-tools { margin: 0 4%; border-radius: 30px; padding: 50px 6%; }
+            .hero-content h2 { font-size: 2.1rem; }
+            .hero-card-float { padding: 8px 12px; max-width: 170px; }
+            .hero-card-float strong { font-size: 0.78rem; }
+            .hero-card-float p { font-size: 0.68rem !important; }
+            .interactive-tools { margin: 0 4%; border-radius: 24px; padding: 40px 5%; }
             .appointment-grid { padding: 30px 20px; }
+            .tool-info h3, .appointment-info h3 { font-size: 1.9rem; }
         }
 
         @media(max-width: 480px) {
-            .hero-content h2 { font-size: 2rem; }
-            .section-title h2 { font-size: 2.1rem; }
-            .main-avatar-box, .about-img-box { height: 350px; max-width: 100%; }
+            .hero-content h2 { font-size: 1.8rem; }
+            .section-title h2 { font-size: 1.9rem; }
+            .main-avatar-box, .about-img-box { height: 310px; max-width: 100%; }
+            .brand-row-1 { font-size: 1.1rem; }
+            .brand-row-2 { font-size: 0.85rem; }
+            .logo-subtitle { display: none; }
         }
     </style>
 </head>
@@ -677,7 +661,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- HEADER LIMPIO -->
+    <!-- HEADER RESPONSIVE -->
     <header>
         <a href="#" class="logo">
             <div class="brand-logo-text">
@@ -686,9 +670,9 @@
                 </div>
                 <div class="brand-row-2">nutrition</div>
             </div>
-            <div style="border-left: 2px solid #E2E8F0; padding-left: 12px;">
-                <span style="font-size: 0.88rem; font-weight: 700; color: var(--primary-dark); display: block;">Lic. Katia Valeria</span>
-                <span class="logo-subtitle">Nutrición Pediátrica</span>
+            <div style="border-left: 2px solid #E2E8F0; padding-left: 10px;">
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-dark); display: block;">Lic. Katia</span>
+                <span class="logo-subtitle">Pediátrica</span>
             </div>
         </a>
         <nav>
@@ -696,7 +680,6 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Conóceme</a></li>
                 <li><a href="#espacios">Servicios</a></li>
-                <li><a href="#faq">Preguntas</a></li>
                 <li><a href="#contacto" class="btn-cta">Agendar Cita</a></li>
             </ul>
         </nav>
@@ -724,7 +707,7 @@
                 <i class="fa-solid fa-bowl-food"></i>
                 <div>
                     <strong>Alimentación BLW</strong>
-                    <p style="font-size: 0.78rem; color: var(--gray);">Paso a paso seguro</p>
+                    <p style="font-size: 0.72rem; color: var(--gray);">Paso a paso seguro</p>
                 </div>
             </div>
             <div class="main-avatar-box">
@@ -734,13 +717,13 @@
                 <i class="fa-solid fa-carrot"></i>
                 <div>
                     <strong>Niños Selectivos</strong>
-                    <p style="font-size: 0.78rem; color: var(--gray);">Sin peleas en la mesa</p>
+                    <p style="font-size: 0.72rem; color: var(--gray);">Sin peleas en la mesa</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE BENEFICIOS PEDIÁTRICOS (ATRACTIVA PARA MAMÁS) -->
+    <!-- SECCIÓN DE BENEFICIOS PEDIÁTRICOS -->
     <div class="stats-section">
         <div class="stat-item">
             <i class="fa-solid fa-apple-whole"></i>
@@ -750,7 +733,7 @@
         <div class="stat-item">
             <i class="fa-solid fa-baby"></i>
             <h3>Especialistas en BLW</h3>
-            <p>Asesoría certificada para iniciar sólidos de forma segura y divertida.</p>
+            <p>Asesoría certificada para iniciar sólidos de forma segura.</p>
         </div>
         <div class="stat-item">
             <i class="fa-solid fa-house-chimney-user"></i>
@@ -760,7 +743,7 @@
         <div class="stat-item">
             <i class="fa-solid fa-face-smile-beam"></i>
             <h3>Cero Drama en la Mesa</h3>
-            <p>Estrategias lúdicas y pacientes para que amen las verduras.</p>
+            <p>Estrategias lúdicas para que amen las verduras.</p>
         </div>
     </div>
 
@@ -771,22 +754,22 @@
         </div>
         <div class="about-content">
             <h3 style="color: var(--kids-pink);">Lic. Katia Valeria Ortega Díaz</h3>
-            <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--primary);">"Una buena alimentación en la infancia es el cimiento de toda una vida saludable."</h3>
-            <p>Hola, soy la Licenciada Katia Valeria. Mi enfoque profesional se centra en brindar acompañamiento clínico y humano a familias y pacientes que buscan optimizar su salud nutricional con bases científicas y sin dietas agresivas.</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--primary);">"Una buena alimentación en la infancia es el cimiento de toda una vida saludable."</h3>
+            <p>Hola, soy la Licenciada Katia Valeria. Mi enfoque profesional se centra en brindar acompañamiento clínico y humano a familias que buscan optimizar su salud nutricional con bases científicas y sin dietas agresivas.</p>
             <p>Me especializo en el desarrollo infantil temprano, alimentación complementaria segura (BLW), manejo clínico de selectividad alimentaria y educación nutricional familiar.</p>
             
             <div class="features-grid">
                 <div class="feature-item">
-                    <i class="fa-solid fa-check"></i> Enfoque lúdico y paciente
+                    <i class="fa-solid fa-check"></i> Enfoque lúdico
                 </div>
                 <div class="feature-item">
-                    <i class="fa-solid fa-check"></i> Asesoría clínica cercana
+                    <i class="fa-solid fa-check"></i> Asesoría cercana
                 </div>
                 <div class="feature-item">
-                    <i class="fa-solid fa-check"></i> Menús familiares adaptados
+                    <i class="fa-solid fa-check"></i> Menús familiares
                 </div>
                 <div class="feature-item">
-                    <i class="fa-solid fa-check"></i> Seguimiento continuo vía WhatsApp
+                    <i class="fa-solid fa-check"></i> Soporte WhatsApp
                 </div>
             </div>
         </div>
@@ -796,13 +779,13 @@
     <section class="spaces-section" id="espacios">
         <div class="section-title">
             <h2>Nuestros Servicios Especializados</h2>
-            <p>Programas clínicos y nutricionales diseñados con cariño para cuidar el bienestar de tus hijos y de toda la familia.</p>
+            <p>Programas clínicos y nutricionales diseñados con cariño para cuidar el bienestar de toda la familia.</p>
         </div>
 
         <div class="tabs-nav">
-            <button class="tab-btn active" onclick="switchTab(event, 'infantil')"><i class="fa-solid fa-baby-carriage"></i> Nutrición Infantil</button>
-            <button class="tab-btn" onclick="switchTab(event, 'general')"><i class="fa-solid fa-plate-wheat"></i> Nutrición General</button>
-            <button class="tab-btn" onclick="switchTab(event, 'educativo')"><i class="fa-solid fa-book-open-reader"></i> Tips y Blog</button>
+            <button class="tab-btn active" onclick="switchTab(event, 'infantil')"><i class="fa-solid fa-baby-carriage"></i> Infantil</button>
+            <button class="tab-btn" onclick="switchTab(event, 'general')"><i class="fa-solid fa-plate-wheat"></i> General</button>
+            <button class="tab-btn" onclick="switchTab(event, 'educativo')"><i class="fa-solid fa-book-open-reader"></i> Blog</button>
         </div>
 
         <!-- TAB INFANTIL -->
@@ -810,32 +793,32 @@
             <div class="service-card kids">
                 <i class="fa-solid fa-bowl-food"></i>
                 <h4>Alimentación Complementaria (BLW)</h4>
-                <p>Guía experta paso a paso para iniciar al bebé en el mundo de los sólidos con total seguridad, previniendo riesgos y fomentando autonomía.</p>
+                <p>Guía experta paso a paso para iniciar al bebé en los sólidos con seguridad, previniendo riesgos y fomentando autonomía.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Cortes y texturas seguras por mes</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Texturas seguras por mes</li>
                     <li><i class="fa-solid fa-circle-check"></i> Prevención de atragantamiento</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Recetarios prácticos para la familia</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Recetarios prácticos</li>
                 </ul>
             </div>
 
             <div class="service-card kids">
                 <i class="fa-solid fa-face-smile-beam"></i>
                 <h4>Manejo de Niños Selectivos</h4>
-                <p>¿El pequeño rechaza verduras o grupos enteros? Aplicamos estrategias basadas en psicología conductual y nutrición lúdica.</p>
+                <p>¿El pequeño rechaza verduras? Aplicamos estrategias basadas en psicología conductual y nutrición lúdica.</p>
                 <ul class="service-list">
                     <li><i class="fa-solid fa-circle-check"></i> Exposición sensorial sin estrés</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Planificación de loncheras escolares</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Restauración de la paz en la mesa</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Loncheras escolares creativas</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Paz y armonía en la mesa</li>
                 </ul>
             </div>
 
             <div class="service-card kids">
                 <i class="fa-solid fa-chart-line"></i>
                 <h4>Control de Crecimiento Infantil</h4>
-                <p>Evaluación antropométrica con curvas OMS y optimización de hábitos para asegurar un desarrollo fuerte, activo y saludable.</p>
+                <p>Evaluación antropométrica con curvas OMS y optimización de hábitos para un desarrollo fuerte y activo.</p>
                 <ul class="service-list">
                     <li><i class="fa-solid fa-circle-check"></i> Somatometría y percentiles</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Guía de porciones familiares</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Porciones ideales familiares</li>
                     <li><i class="fa-solid fa-circle-check"></i> Pautas de actividad física</li>
                 </ul>
             </div>
@@ -846,33 +829,33 @@
             <div class="service-card">
                 <i class="fa-solid fa-weight-scale"></i>
                 <h4>Control de Peso Saludable</h4>
-                <p>Olvida las restricciones extremas. Aprende a nutrir tu organismo con alimentos reales disfrutando cada proceso sin culpa.</p>
+                <p>Olvida las restricciones extremas. Aprende a nutrir tu organismo con alimentos reales disfrutando sin culpa.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Distribución de macronutrientes</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Educación de hábitos sostenibles</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Listas inteligentes para el súper</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Macronutrientes equilibrados</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Hábitos sostenibles</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Listas inteligentes de súper</li>
                 </ul>
             </div>
 
             <div class="service-card">
                 <i class="fa-solid fa-heart-pulse"></i>
                 <h4>Nutrición Clínica y Metabólica</h4>
-                <p>Asesoría especializada para resistencia a la insulina, síndrome de ovario poliquístico (SOP), hipertensión y salud digestiva.</p>
+                <p>Asesoría especializada para resistencia a la insulina, SOP, hipertensión y salud digestiva.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Interpretación clínica de laboratorios</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Interpretación de laboratorios</li>
                     <li><i class="fa-solid fa-circle-check"></i> Protocolos antiinflamatorios</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Guías de suplementación sugerida</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Guías de suplementación</li>
                 </ul>
             </div>
 
             <div class="service-card">
                 <i class="fa-solid fa-person-running"></i>
                 <h4>Nutrición para la Mujer y Ciclo</h4>
-                <p>Sincronización nutricional con el ciclo menstrual para equilibrar hormonas, optimizar energía y disminuir síntomas molestos.</p>
+                <p>Sincronización nutricional con el ciclo menstrual para equilibrar hormonas y optimizar energía.</p>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Alimentación por fases hormonales</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Alimentación por fases</li>
                     <li><i class="fa-solid fa-circle-check"></i> Manejo del estrés y cortisol</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Vitalidad y bienestar integral</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Vitalidad diaria</li>
                 </ul>
             </div>
         </div>
@@ -882,19 +865,19 @@
             <div class="service-card" style="border-top-color: var(--kids-pink);">
                 <i class="fa-solid fa-newspaper" style="color: var(--kids-pink);"></i>
                 <h4>Blog de Salud Familiar</h4>
-                <p>Artículos especializados sobre lectura de etiquetas nutrimentales, mitos de azúcares y snacks escolares.</p>
+                <p>Artículos especializados sobre lectura de etiquetas, mitos de azúcares y snacks escolares.</p>
             </div>
 
             <div class="service-card" style="border-top-color: var(--kids-pink);">
                 <i class="fa-solid fa-comments" style="color: var(--kids-pink);"></i>
                 <h4>Guías de Pediatría</h4>
-                <p>Información respaldada en evidencia científica para el cuidado óptimo de la salud infantil en el hogar.</p>
+                <p>Información respaldada en evidencia científica para el cuidado óptimo de la salud infantil.</p>
             </div>
 
             <div class="service-card" style="border-top-color: var(--kids-pink);">
                 <i class="fa-solid fa-apple-whole" style="color: var(--kids-pink);"></i>
                 <h4>Comunidad de Apoyo</h4>
-                <p>Espacio colaborativo donde compartimos experiencias, retos diarios y recetas de cocina saludable.</p>
+                <p>Espacio colaborativo donde compartimos experiencias, retos diarios y recetas saludables.</p>
             </div>
         </div>
     </section>
@@ -903,14 +886,14 @@
     <section class="interactive-tools">
         <div class="tool-info">
             <h3>Calcula tu IMC Profesional</h3>
-            <p>El Índice de Masa Corporal (IMC) es un parámetro clínico orientativo que relaciona el peso y la talla. Esta herramienta te proporciona una perspectiva inicial confidencial respaldada por criterios médicos.</p>
-            <div style="display: flex; gap: 12px; font-weight: 600; align-items: center; margin-top: 20px;">
-                <i class="fa-solid fa-shield-heart" style="font-size: 2rem; color: var(--kids-yellow);"></i>
-                <span>Evaluación orientativa bajo estándares clínicos.</span>
+            <p>El Índice de Masa Corporal (IMC) es un parámetro clínico orientativo que relaciona el peso y la talla. Herramienta confidencial respaldada por criterios médicos.</p>
+            <div style="display: flex; gap: 10px; font-weight: 600; align-items: center; margin-top: 15px;">
+                <i class="fa-solid fa-shield-heart" style="font-size: 1.6rem; color: var(--kids-yellow);"></i>
+                <span>Estándares clínicos de evaluación.</span>
             </div>
         </div>
         <div class="imc-calculator">
-            <h4><i class="fa-solid fa-calculator"></i> Calculadora Clínica de IMC</h4>
+            <h4><i class="fa-solid fa-calculator"></i> Calculadora IMC</h4>
             <div class="form-group">
                 <label>Género:</label>
                 <select id="genero">
@@ -935,7 +918,7 @@
     <section class="faq-section" id="faq">
         <div class="section-title">
             <h2>Preguntas Frecuentes</h2>
-            <p>Resolvemos las dudas clínicas más comunes antes de iniciar el proceso nutricional.</p>
+            <p>Resolvemos las dudas clínicas más comunes antes de iniciar el proceso.</p>
         </div>
         <div class="faq-container">
             <div class="faq-item" onclick="toggleFaq(this)">
@@ -944,7 +927,7 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    ¡Ambas modalidades están disponibles! Contamos con consultorio equipado en Metepec y atención digital segura por videollamada para pacientes foráneos o internacionales.
+                    ¡Ambas modalidades están disponibles! Contamos con consultorio en Metepec y atención digital segura por videollamada.
                 </div>
             </div>
 
@@ -954,7 +937,7 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Los lineamientos pediátricos internacionales recomiendan iniciar alrededor de los 6 meses, siempre que el bebé mantenga control cefálico y muestre interés activo por los alimentos.
+                    Los lineamientos pediátricos recomiendan iniciar alrededor de los 6 meses, cuando el bebé mantiene control cefálico y muestra interés activo.
                 </div>
             </div>
 
@@ -964,7 +947,7 @@
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    ¡De ninguna manera! Nuestro enfoque rechaza las prohibiciones estrictas. Fomentamos la flexibilidad metabólica y una relación sana y sin traumas con la comida en familia.
+                    ¡De ninguna manera! Fomentamos la flexibilidad metabólica y una relación sana y sin traumas con la comida en familia.
                 </div>
             </div>
         </div>
@@ -974,13 +957,13 @@
     <section class="appointment-section" id="contacto">
         <div class="section-title">
             <h2>Agenda tu Cita Profesional</h2>
-            <p>Da el paso definitivo hacia una salud óptima. Llena el formulario y nos pondremos en contacto contigo.</p>
+            <p>Da el paso definitivo hacia una salud óptima. Llena el formulario y nos pondremos en contacto.</p>
         </div>
 
         <div class="appointment-grid">
             <div class="appointment-info">
                 <h3>Estamos listas para acompañarte</h3>
-                <p>Cada consulta está estructurada para escuchar con atención a las familias, evaluar objetivos clínicos y trazar un plan realista y sostenible.</p>
+                <p>Cada consulta está estructurada para escuchar con atención a las familias y trazar un plan realista y sostenible.</p>
                 
                 <div class="contact-methods">
                     <a href="https://wa.me/5215561901308?text=Hola%20Nutrióloga%20Katia,%20me%20gustaría%20agendar%20una%20cita" target="_blank" class="contact-box">
@@ -1029,9 +1012,9 @@
                     </div>
                     <div class="form-group">
                         <label>Objetivos del paciente o pequeño:</label>
-                        <textarea id="mensaje" placeholder="Ej. Quisiera asesoría nutricional para mi hijo de 3 años..."></textarea>
+                        <textarea id="mensaje" placeholder="Ej. Quisiera asesoría para mi hijo de 3 años..."></textarea>
                     </div>
-                    <button type="submit" class="btn-cta" style="width: 100%; border: none; padding: 16px; font-size: 1.05rem; cursor: pointer;">Solicitar Cita con la Nutrióloga</button>
+                    <button type="submit" class="btn-cta" style="width: 100%; border: none; padding: 14px; font-size: 1rem; cursor: pointer;">Solicitar Cita con la Nutrióloga</button>
                 </form>
             </div>
         </div>
@@ -1050,7 +1033,7 @@
                 <a href="https://wa.me/5215561901308" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
-        <p class="copyright">&copy; 2026 Lic. Katia Valeria Ortega Díaz. Todos los derechos reservados. Excelencia en Nutrición Pediátrica y Clínica.</p>
+        <p class="copyright">&copy; 2026 Lic. Katia Valeria Ortega Díaz. Todos los derechos reservados.</p>
     </footer>
 
     <!-- SCRIPT -->
@@ -1077,16 +1060,16 @@
 
             if(!peso || !altura || peso <= 0 || altura <= 0) {
                 res.style.display = 'block';
-                res.innerHTML = '⚠️ Ingresa valores válidos para el cálculo.';
+                res.innerHTML = '⚠️ Ingresa valores válidos.';
                 return;
             }
 
             const imc = peso / (altura * altura);
             let txt = `IMC: ${imc.toFixed(1)} (${genero}) - `;
-            if(imc < 18.5) txt += 'Peso bajo (Requiere valoración).';
+            if(imc < 18.5) txt += 'Peso bajo.';
             else if(imc < 25) txt += '¡Rango de peso saludable!';
-            else if(imc < 30) txt += 'Sobrepeso (Asesoría recomendada).';
-            else txt += 'Rango elevado (Atención clínica sugerida).';
+            else if(imc < 30) txt += 'Sobrepeso.';
+            else txt += 'Rango elevado.';
 
             res.style.display = 'block';
             res.innerHTML = txt;
